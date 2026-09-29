@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viteku - Platform Undangan Digital</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header & Banner -->
+  <header>
+    <div class="welcome-badge">✨ Selamat Datang di Viteku ✨</div>
+    <h1>Viteku Digital Invitation</h1>
+    <p>Buat undangan digital impianmu dengan mudah, cepat, dan elegan.</p>
+    <div class="promo-banner">
+      🔥 Yuk, wujudkan undangan impianmu sekarang juga! Pesan mudah, praktis, dan langsung terhubung ke admin pilihanmu.
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Formulir Pemesan & Pembayaran -->
+    <section class="form-section">
+      <h2>Langkah 1: Masukkan Data Pemesan</h2>
+      <div class="input-group">
+        <label for="namaPemesan">Nama Lengkap:</label>
+        <input type="text" id="namaPemesan" placeholder="Masukkan nama kamu...">
+      </div>
+      <div class="input-group">
+        <label for="platformPenyebaran">Pilih Platform Penyebaran:</label>
+        <select id="platformPenyebaran">
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Website Khusus">Website Khusus</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="metodePembayaran">Pilih Metode Pembayaran:</label>
+        <select id="metodePembayaran">
+          <option value="Transfer Bank (BCA/BRI)">Transfer Bank (BCA / BRI)</option>
+          <option value="DANA">DANA</option>
+          <option value="OVO / GoPay">OVO / GoPay</option>
+          <option value="QRIS (Semua E-Wallet)">QRIS (Semua E-Wallet / Bank)</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Tombol Lihat Contoh Undangan (Netlify Demo) -->
+    <section style="text-align: center; background: white; padding: 20px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+      <h3 style="font-size: 18px; color: #2575fc; margin-bottom: 8px;">✨ Ingin Lihat Contoh Hasilnya?</h3>
+      <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Klik tombol di bawah ini untuk melihat demo tampilan undangan digital kami secara langsung!</p>
+      
+      <a href="https://lustrous-souffle-11d295.netlify.app" target="_blank" style="display: inline-block; background: #2575fc; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);">
+        🌐 Buka Demo Undangan Digital
+      </a>
+    </section>
+
+    <!-- Daftar 8 Paket -->
+    <section class="packages-section">
+      <h2>Langkah 2: Pilih Jenis Undangan & Admin Tujuan</h2>
+      <div class="packages-grid">
+        
+        <!-- Paket 1: Wedding -->
+        <div class="package-card featured">
+          <h3>Paket Wedding</h3>
+          <p class="price">Rp 50.000</p>
+          <p class="desc">Wujudkan pernikahan impian dengan undangan digital mewah berfitur lengkap: peta lokasi, amplop digital, RSVP, dan musik latar.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin1" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin1" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Wedding', 50000, 'admin1')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 2: Birthday -->
+        <div class="package-card">
+          <h3>Paket Birthday</h3>
+          <p class="price">Rp 15.000</p>
+          <p class="desc">Meriahkan hari ulang tahunmu dengan undangan interaktif yang penuh warna, musik asyik, dan tema yang super seru.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin2" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin2" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Birthday', 15000, 'admin2')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 3: Anniversary -->
+        <div class="package-card">
+          <h3>Paket Anniversary</h3>
+          <p class="price">Rp 15.000</p>
+          <p class="desc">Abadikan perjalanan cinta atau hari jadian kalian dalam balutan undangan romantis yang indah dan penuh kenangan.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin3" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin3" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Anniversary', 15000, 'admin3')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 4: Wisuda -->
+        <div class="package-card featured">
+          <h3>Paket Wisuda</h3>
+          <p class="price">Rp 35.000</p>
+          <p class="desc">Rayakan kelulusanmu secara eksklusif dengan desain megah, galeri foto pencapaian, dan fitur hitung mundur acara.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin4" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin4" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Wisuda', 35000, 'admin4')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 5: Aqiqah -->
+        <div class="package-card">
+          <h3>Paket Aqiqah</h3>
+          <p class="price">Rp 15.000</p>
+          <p class="desc">Bagikan momen penuh syukur atas kelahiran buah hati dengan desain undangan yang manis, elegan, dan penuh berkah.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin5" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin5" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Aqiqah', 15000, 'admin5')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 6: Syukuran Rumah Baru -->
+        <div class="package-card">
+          <h3>Paket Syukuran Rumah Baru</h3>
+          <p class="price">Rp 15.000</p>
+          <p class="desc">Undang keluarga dan kerabat tercinta ke tempat tinggal baru dengan nuansa hangat dan informasi lokasi yang akurat.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin6" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin6" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Syukuran Rumah Baru', 15000, 'admin6')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 7: Sunatan / Khitanan -->
+        <div class="package-card">
+          <h3>Paket Sunatan / Khitanan</h3>
+          <p class="price">Rp 15.000</p>
+          <p class="desc">Undangan digital praktis dan ramah seluler untuk acara tasyakuran khitanan buah hati tercinta.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin7" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin7" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Sunatan / Khitanan', 15000, 'admin7')">Pesan Sekarang</button>
+        </div>
+
+        <!-- Paket 8: Reuni & Gathering -->
+        <div class="package-card">
+          <h3>Paket Reuni & Gathering</h3>
+          <p class="price">Rp 15.000</p>
+          <p class="desc">Undangan seru untuk ajang kumpul bareng teman lama, alumni sekolah, atau komunitas dengan fitur RSVP kehadiran.</p>
+          <div class="input-group" style="margin: 10px 0; text-align: left;">
+            <label for="admin8" style="font-size: 12px; font-weight: bold;">Pilih Admin:</label>
+            <select id="admin8" style="width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+              <option value="6285343942997">Admin 1</option>
+              <option value="6288704611730">Admin 2</option>
+              <option value="6285255089637">Admin 3</option>
+            </select>
+          </div>
+          <button type="button" onclick="pesanPaket('Paket Reuni & Gathering', 15000, 'admin8')">Pesan Sekarang</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Statistik Jumlah Pesanan (Aman & Privat) -->
+    <section class="dashboard-section" style="text-align: center; background: linear-gradient(135deg, #f5f7fa, #c3cfe2); padding: 25px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+      <h2 style="color: #333; font-size: 20px; margin-bottom: 10px;">📊 Statistik Kepercayaan Pelanggan</h2>
+      <p style="font-size: 14px; color: #555; margin-bottom: 15px;">Sudah banyak yang mempercayakan undangan digitalnya di Viteku:</p>
+      <div style="background: white; display: inline-block; padding: 15px 30px; border-radius: 50px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <span style="font-size: 22px; font-weight: bold; color: #2575fc;" id="totalPesanan">Memuat...</span>
+        <span style="font-size: 14px; color: #666; display: block;">Total Undangan Dipesan</span>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwwEQoi0kEOUY4JAulXUbefAPR0-Y4JOpEVEkTDB1i-6r3bDNvLYW2-pkwWxIGNQZLA/exec';
+    
+    function pesanPaket(namaPaket, hargaPaket, idAdminSelect) {
+      const nama = document.getElementById('namaPemesan').value.trim();
+      const platform = document.getElementById('platformPenyebaran').value;
+      const pembayaran = document.getElementById('metodePembayaran').value;
+      const noWa = document.getElementById(idAdminSelect).value;
+
+      if (!nama) {
+        alert('Mohon masukkan nama lengkap pemesan terlebih dahulu di Langkah 1!');
+        document.getElementById('namaPemesan').focus();
+        return;
+      }
+
+      // Kirim data ke Google Sheets via Fetch
+      const formData = new URLSearchParams();
+      formData.append('Waktu', new Date().toLocaleString());
+      formData.append('Nama', nama);
+      formData.append('Paket', namaPaket);
+      formData.append('Platform', platform);
+      formData.append('Pembayaran', pembayaran);
+
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => {
+          console.log('Success!', response);
+          setTimeout(loadDataPesanan, 1500);
+        })
+        .catch(error => console.error('Error!', error.message));
+
+      let pesan = `Halo Admin Viteku, saya ${nama} ingin memesan ${namaPaket} seharga Rp ${hargaPaket.toLocaleString()} dengan platform ${platform} dan metode pembayaran ${pembayaran}. Mohon bantuannya ya!`;
+      window.open(`https://wa.me/${noWa}?text=${encodeURIComponent(pesan)}`, '_blank');
+    }
+
+    function loadDataPesanan() {
+      fetch(scriptURL)
+        .then(response => response.json())
+        .then(data => {
+          const totalElemen = document.getElementById('totalPesanan');
+          if (!data || data.length === 0) {
+            totalElemen.innerText = '0 Pesanan';
+            return;
+          }
+          // Menghitung jumlah data pesanan (dikurangi 1 untuk baris judul header)
+          const jumlahPesanan = data.length - 1;
+          totalElemen.innerText = `${jumlahPesanan > 0 ? jumlahPesanan : 0} Pesanan Selesai`;
+        })
+        .catch(error => {
+          console.error('Gagal memuat data:', error);
+          document.getElementById('totalPesanan').innerText = '10+ Pesanan';
+        });
+    }
+
+    window.onload = loadDataPesanan;
+  </script>
+</body>
+</html>
